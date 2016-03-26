@@ -82,4 +82,4 @@ print sorted(result, key = lambda x: x[0])
 
 # 8. select dept_id, avg(salary) from s_emp group by dept_id having avg(salary) < 1500
 print "\nselect dept_id, avg(salary) from s_emp group by dept_id having avg(salary) < 1500:"
-for department in { d[9] for d in s_emp[1::] }: print (lambda dept_id, avgSal: (dept_id, avgSal) if avgSal < 1500 else "department makes over 1500")(department, (lambda l: round(sum(l) / len(l), 2)) (map(float, [ e[7] for e in s_emp[1::] if e[9] == department ])))
+for department in { d[9] for d in s_emp[1::] }: print (lambda dept_id, avgSal: (dept_id, avgSal) if avgSal < 1500 else "department makes over 1500 avg salary")(department, (lambda l: round(sum(l) / len(l), 2)) (map(float, [ e[7] for e in s_emp[1::] if e[9] == department ])))
