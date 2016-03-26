@@ -80,7 +80,7 @@ var list = function() {
                 }
                 // if initial node is not go next
                 else {
-                    initialNode = iNode.next;
+                    initialNode = initialNode.next;
                 }
                 // return data
                 return initialNode.data;
@@ -98,7 +98,7 @@ var l1 = new list();
 l0.cons('a')
 l0.cons('b')
 l0.cons('c')
-l1.cons(l1);
+l1.cons(l0);
 
 document.writeln("<BR>this is the original list (for comparison): " + l0.car());
 while(l0.length() > 1) {
